@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Carrinho</title>
+
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="./css/cesta.css">
+    </head>
+    <body>
+        <main class="principal">
+            <header class="cabecalho2">
+                <p>Livraria Green📚</p>
+            </header>
+            
+            <nav class="navegacao">
+                <a href="./index.html" class="navegacao--link">| Página Inicial |</a>
+                <a href="./ctrl-estoque.html" class="navegacao--link">| Controle de Estoque |</a>
+                <a href="./add-produto.html" class="navegacao--link">| Adicionar Produto |</a>
+                <a href="./funcionarios.html" class="navegacao--link">| Funcionários |</a>
+            </nav>
+
+            <section class="cesta">
+                <h2 class="cesta--titulo">Cesta de Compras</h2>
+                <form class="cesta--form" action="">
+                    
+                    <label for="nome-produto" class="cesta--form--label">Nome do produto: </label>
+                    <select id="nome-produto" name="nome-produto" class="cesta--form--select">
+                        <option value="Quem é você, Alasca?">Quem é você, Alasca?</option>
+                        <option value="Tartarugas até lá embaixo">Tartarugas Até Lá Embaixo</option>
+                        <option value="A Culpa é das estrelas">A Culpa É das Estrelas</option>
+                        <option value="Cidades de papel">Cidades de Papel</option>
+                        <option value="Box - Harry Potter">Box - Harry Potter</option>
+                    </select>
+
+                    <label for="quantidade-produto" class="cesta--form--label">Quantidade: </label>
+                    <input type="number" id="quantidade-produto" name="quantidade-produto" class="cesta--form--input">
+                    
+                    <button type="submit">Adicionar à Cesta</button>
+                </form>
+                <section class="lista-de-compras">
+                    <ul class="compras--lista">
+                        <li class="compras--lista--item">Box - Harry Potter  |  1 unidade</li>
+                        <li class="compras--lista--item">Quem é você, Alasca?  |  2 unidades</li>
+                        <li class="compras--lista--item">Cidades de Papel  |  1 unidade</li>
+                    </ul>
+                    <img src="./img/cesta.png" class="compras--img">
+                </section>
+            </section>
+
+            <footer class="rodape">
+                <p class="rodape--descricao">Siga-nos nas redes sociais!</p>
+                <a href="#"><img src="./img/facebook.svg" class="rodape--icone" alt="ícone do facebook"/></a>
+                <a href="#"><img src="./img/instagram.svg" class="rodape--icone" alt="ícone do instagram"/></a>
+                <a href="#"><img src="./img/youtube.svg" class="rodape--icone" alt="ícone do youtube"/></a>
+                <span>Rafael Chagas &copy 2022</span>
+            </footer>
+        </main>
+    </body>
+</html>

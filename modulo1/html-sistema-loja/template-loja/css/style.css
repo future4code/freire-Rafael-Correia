@@ -1,0 +1,37 @@
+.principal {
+    padding: 0 20px;
+    background-color: #93c09e;
+    color: #121212;
+}
+
+.cabecalho2 {
+    background-color: #2c8160;
+    padding: 10px 5px 10px 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.navegacao {
+    text-align: end;
+}
+
+.navegacao--link {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.rodape {
+    background-color: #2c8160;
+    border-radius: 5px;
+    padding: 20px 10px;
+    text-align: center;
+}
+.rodape--descricao {
+    font-size: 18px;
+}
+.rodape--icone {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}

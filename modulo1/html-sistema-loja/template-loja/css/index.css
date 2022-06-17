@@ -1,0 +1,28 @@
+.cabecalho {
+    background-color: #2c8160;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.cabecalho--titulo {
+    text-align: center;
+}
+
+.cabecalho--subtitulo {
+    text-align: center;
+    font-size: 22px;
+}
+
+.descricao {
+    font-style: italic;
+    margin: 40px;
+}
+
+.descricao--titulo {
+    font-size: 28px;
+}
+.descricao p {
+    text-align: center;
+    font-size: 18px;
+}

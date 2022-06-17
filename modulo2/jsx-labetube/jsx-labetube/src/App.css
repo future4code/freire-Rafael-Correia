@@ -1,0 +1,276 @@
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.tela-inteira {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho e navegação vertical */
+header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 10%;
+  margin-left: 8%;
+  padding: 0;
+  position: fixed;
+  width: 92%;
+  border-left: none;
+}
+
+.logo-header {
+  display: flex;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  height: 100%;
+  align-items: center;
+}
+
+.logo-header img {
+  height: 100%;
+  padding: 0 0.3rem;
+}
+
+.campoDeBusca, .botao-header {
+  height: 70%;
+  width: 45%;
+  border-radius: 2px;
+}
+
+.campoDeBusca {
+  display: flex;
+  align-items: center;
+}
+
+.campoDeBusca input {
+  height: 100%;
+  padding: 0;
+  border: 1px solid black;
+  border-right: none;
+  width: 80%;
+  padding-left: 1rem;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: white;
+  height: 100%;
+  border: 1px solid black;
+  border-left: none;
+}
+
+.img-container img {
+  width: 1.7rem;
+}
+
+.mic-header {
+  height: 100%;
+  margin-left: 1rem;
+  background-color: rgb(220, 202, 202);
+  border-radius: 100%;
+}
+
+.login-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+}
+
+.login-container button {
+  width: 55%;
+  color: red;
+}
+
+.botao-header {
+  width: 10%;
+  text-transform: uppercase;
+  border-color: red;
+}
+
+/* Navegação horizontal */
+.menu-horizontal {  
+  height: 10%;
+  margin-left: 8%;
+  position: fixed;
+  top: 10%;
+  width: 92%;
+}
+
+.lista-menu-horizontal{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  text-decoration: none;
+  list-style-type: none;
+  background-color: white;
+}
+
+.lista-menu-horizontal li {
+  padding: 0.7rem 1.5rem;
+  background-color: rgb(220, 202, 202);
+  border-radius: 40%;
+  font-weight: bold;
+}
+
+/* Corpo da página aqui */
+main {
+  min-height: 80%;
+  display: flex;
+  margin-left: 8%;
+  background-color: rgb(220, 202, 202);
+}
+
+.menu-vertical {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+  height: 100vh;
+  position: fixed;
+  width: 8%;
+}
+
+.lista-menu-vertical {
+  padding: 0;
+  margin: 0;
+}
+
+.botoes-meunu-vertical {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 1.8rem 0.5rem 0 0.5rem;
+}
+
+.botoes-meunu-vertical img, header img {
+  width: 2.5rem;
+}
+
+.botoes-meunu-vertical p {
+  margin: 0;
+}
+
+.painel-de-videos {
+  padding-left: 20px;
+  margin-top: 15%;
+  width: 92%;
+  flex-grow: 1;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(4, 23.5% 0.2%);
+  grid-template-rows: repeat(4, 270px 20px);
+  height: alto;
+}
+
+.media1 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.media2 {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+
+.media3 {
+  grid-column-start: 5;
+  grid-row-start: 1;
+}
+
+.media4 {
+  grid-column-start: 7;
+  grid-row-start: 1;
+}
+
+.media5 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.media6 {
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+
+.media7 {
+  grid-column-start: 5;
+  grid-row-start: 3;
+}
+
+.media8 {
+  grid-column-start: 7;
+  grid-row-start: 3;
+}
+
+.media9 {
+  grid-column-start: 1;
+  grid-row-start: 5;
+}
+
+.media10 {
+  grid-column-start: 3;
+  grid-row-start: 5;
+}
+
+.media11 {
+  grid-column-start: 5;
+  grid-row-start: 5;
+}
+
+.media12 {
+  grid-column-start: 7;
+  grid-row-start: 5;
+}
+
+
+.box-pagina-principal {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-template-columns: 1fr;
+  border-style: solid;
+  border-width: thin; 
+  align-items: start;
+  justify-items: stretch;
+  background-color: white;
+}
+
+
+footer {
+  height: 10%;
+  background-color: grey;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.box-pagina-principal > img {
+  width: 100%;
+  height: 200px;
+}
+
+h4 {
+  margin-left: 20px;
+}

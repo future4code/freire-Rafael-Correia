@@ -1,0 +1,39 @@
+header {
+    margin-bottom: 2rem;
+}
+
+.volta-home {
+    background-color: #a7a457;
+    border: 1px solid #faebd7;
+    border-radius: 5px;
+    color: #faebd7;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    width: 7rem;
+}
+
+.projeto--title {
+    margin-top: 0px;
+    text-align: center;
+}
+.projeto--imagem {
+    border: 1px solid #faebd7;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.descricao {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.techs ul {
+    display: block;
+    font-size: 1.3rem;
+    list-style-position: inside;
+    text-align: center;
+}

@@ -1,0 +1,22 @@
+.adiciona {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 20px;
+}
+
+.adiciona--form {
+    display: block;
+}
+
+.adiciona--form--label {
+    padding: 10px 10px;
+    display: block;
+}
+
+.adiciona--form--input {
+    border-radius: 5px;
+}
+
+.adiciona--form button {
+    border-radius: 5px;
+}

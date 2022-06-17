@@ -1,0 +1,3 @@
+#Aprendizados da semana
+
+Nos primeiros dias da semana aprendi sobre o funcionamento do curso e como acessar as plataformas e também aprendi sobre a diversidade das pessoas e muitos **conceitos** e comportamentos que eu não tinha conchecimento antes. Em seguida entramos um pouco na parte **técnica**, eu conhecia algumas coisas sobre terminal, git e github mas de maneira vaga, agora me sinto com uma base bem mais firme e mais **confiante** para usar as **ferramentas**, já que aprendi os principais comandos e como usá-los corretamente.

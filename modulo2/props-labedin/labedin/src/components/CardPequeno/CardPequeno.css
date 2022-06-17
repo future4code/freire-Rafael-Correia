@@ -1,0 +1,15 @@
+.container-card-pequeno {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px 10px;
+    height: 50px;
+}
+
+.container-card-pequeno > img {
+    width: 30px;
+}
+
+.container-card-pequeno h4 {
+    margin: 0 5px;
+}

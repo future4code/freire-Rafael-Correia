@@ -1,0 +1,37 @@
+.estoque {
+    margin: 25px auto;
+}
+
+.estoque--titulo {
+    text-align: center;
+}
+
+.estoque--link-cesta {
+    display: block;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid #222222;
+    border-radius: 5px;
+}
+
+.estoque--link-cesta--img {
+    height: 100px;
+    width: 200px;
+}
+
+.estoque--tabela {
+    padding: 15px 0;
+}
+
+
+.estoque--tabela--item td, .estoque--tabela--item th {
+    text-align: center;
+    padding: 20px 30px;
+}
+
+.estoque--tabela--item img {
+    width: 40vw;
+    height: 400px;
+    border-radius: 5px;
+}
