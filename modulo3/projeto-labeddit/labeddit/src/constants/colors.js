@@ -1,0 +1,7 @@
+export const inicialGradient = '#FF6489'
+export const finalGradient = '#F9B24E'
+export const darkerBg = '#EDEDED'
+export const lightText = '#6F6F6F'
+export const lightTitle = '#373737'
+export const linkColor = '#4088CB'
+export const linkActiveColor = '#FE7E02'
