@@ -1,0 +1,18 @@
+POST http://localhost:3003/usuario/cadastrar 
+Content-Type: application/json
+
+{
+"email": "pedroAdmin@gmail.com", "password": "pedroca123", "role": "admin"
+}
+
+### 
+GET http://localhost:3003/usuario/login 
+Content-Type: application/json
+
+{
+"email": "pedroAdmin@gmail.com", "password": "pedroca123"
+}
+
+### 
+GET http://localhost:3003/usuario/profile 
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1ODBkOGJkLWMwYjAtNDU5Mi05ZjI0LTRiMGUwNTU2MDU2MCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY2MzEwMDIxNiwiZXhwIjoxNjYzMTAwNTE2fQ.i6VatKZLLD0343IIyL_E5b0UuTaZLKv7pDhOjMrpjG0
