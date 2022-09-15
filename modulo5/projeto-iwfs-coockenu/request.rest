@@ -1,8 +1,11 @@
-POST http://localhost:3003/usuario/cadastrar 
+POST http://localhost:3003/signup 
 Content-Type: application/json
 
-{
-"email": "pedroAdmin@gmail.com", "password": "pedroca123", "role": "admin"
+{   
+    "name": "User Test",
+    "email": "testUser@gmail.com", 
+    "password": "user1597", 
+    "role": "normal"
 }
 
 ### 

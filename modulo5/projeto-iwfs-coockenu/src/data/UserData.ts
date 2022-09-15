@@ -2,11 +2,12 @@ import { UserEntity } from "../entities/UserEntity"
 import BaseDataBase from "./BaseDataBase"
 
 class UserData extends BaseDataBase {
-    public userTableName = "UserAulaAutenticao"
+    public userTableName = "cookenu_user"
 
     async insertUser(user: UserEntity): Promise<void> {
         await this.getConnection().insert({
             id: user.getId(),
+            name: user.getName(),
             email: user.getEmail(),
             password: user.getPassword(),
             role: user.getRole()
@@ -24,12 +25,12 @@ class UserData extends BaseDataBase {
     }
 
     public async selecionarUsuarioPorId(id: string): Promise<any> {
-        const resultado = await this.getConnection()
+        const result = await this.getConnection()
             .select("*")
             .from(this.userTableName)
             .where({ id })
 
-        return resultado[0]
+        return new UserEntity(result[0].id, result[0].name, result[0].email, result[0].password, result[0].role)
     }
 }
 

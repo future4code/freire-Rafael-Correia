@@ -5,16 +5,21 @@ import { InvalidRole } from "../error/InvalidRole"
 import { InvalidPassword } from "../error/InvalidPassword"
 import { UsuarioNormalApenas } from "../error/UsuarioNormalApenas"
 import { IdGenerator } from "../services/IdGenerator"
-import { gerarToken } from "../services/gerarToken"
+import { TokenGenerator } from "../services/TokenGenerator"
 import { HashManager } from "../services/HashManager"
-import { pegarDados } from "../services/pegarDados"
+import { GetData } from "../services/GetData"
 import { UserEntity, USER_ROLES } from "../entities/UserEntity"
+import { EmptyName } from "../error/EmptyName"
 
 export class User {
     public async createUser(req: Request, res: Response) {
         try {
 
             const { name, email, password, role } = req.body
+
+            if(!name) {
+                throw new EmptyName()
+            }
 
             if (!email || !(email.includes('@'))) {
                 throw new InvalidEmail()
@@ -39,7 +44,9 @@ export class User {
 
             await userData.insertUser(user)
 
-            const token = gerarToken({
+            const tokenGenerator: TokenGenerator = new TokenGenerator()
+
+            const token = tokenGenerator.generateToken({
                 id: user.getId(),
                 role,
             })
@@ -76,7 +83,9 @@ export class User {
                 throw new InvalidPassword()
             }
 
-            const token = gerarToken({
+            const tokenGenerator: TokenGenerator = new TokenGenerator()
+
+            const token = tokenGenerator.generateToken({
                 id: user.getId(),
                 role: user.getRole(),
             })
@@ -95,7 +104,8 @@ export class User {
 
             const token = req.headers.authorization as string
 
-            const authenticationData = pegarDados(token)
+            const getData: GetData = new GetData()
+            const authenticationData = getData.getData(token)
 
             const userData: UserData = new UserData()
 
