@@ -9,13 +9,18 @@ Content-Type: application/json
 }
 
 ### 
-GET http://localhost:3003/usuario/login 
+GET http://localhost:3003/login 
 Content-Type: application/json
 
 {
-"email": "pedroAdmin@gmail.com", "password": "pedroca123"
+    "email": "testUser@gmail.com", 
+    "password": "user1597"
 }
 
 ### 
-GET http://localhost:3003/usuario/profile 
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1ODBkOGJkLWMwYjAtNDU5Mi05ZjI0LTRiMGUwNTU2MDU2MCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY2MzEwMDIxNiwiZXhwIjoxNjYzMTAwNTE2fQ.i6VatKZLLD0343IIyL_E5b0UuTaZLKv7pDhOjMrpjG0
+GET http://localhost:3003/user/profile 
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3ZGU1ZDBlLTIyMDYtNDljNS04NzcwLWRjYTQwMDBkMmJkNiIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2NjMzNTY1NzgsImV4cCI6MTY2MzM1Njg3OH0.f6U7zlU1irX90tKfcgx9OPxRmzQfzP9iYSJfIqCQCz0
+
+###
+GET http://localhost:3003/user/5d9c2705-e91c-41a0-82eb-07a6bb3a684e
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3ZGU1ZDBlLTIyMDYtNDljNS04NzcwLWRjYTQwMDBkMmJkNiIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2NjMzNTY1NzgsImV4cCI6MTY2MzM1Njg3OH0.f6U7zlU1irX90tKfcgx9OPxRmzQfzP9iYSJfIqCQCz0

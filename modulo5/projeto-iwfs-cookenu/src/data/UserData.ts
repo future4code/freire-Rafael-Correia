@@ -24,7 +24,7 @@ class UserData extends BaseDataBase {
         return new UserEntity(result[0].id, result[0].name, result[0].email, result[0].password, result[0].role)
     }
 
-    public async selecionarUsuarioPorId(id: string): Promise<any> {
+    public async selectUserById(id: string): Promise<any> {
         const result = await this.getConnection()
             .select("*")
             .from(this.userTableName)

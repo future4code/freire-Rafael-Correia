@@ -99,7 +99,7 @@ export class User {
         }
     }
 
-    public async pegarDadosUsuario(req: Request, res: Response) {
+    public async getUserProfile(req: Request, res: Response) {
         try {
 
             const token = req.headers.authorization as string
@@ -109,19 +109,40 @@ export class User {
 
             const userData: UserData = new UserData()
 
-            const usuario = await userData.selecionarUsuarioPorId(authenticationData.id)
-
-            if (usuario.role !== "normal") {
-                throw new UsuarioNormalApenas()
-            }
+            const user = await userData.selectUserById(authenticationData.id)
 
             res.status(200).send({
-                id: usuario.id,
-                email: usuario.email
+                id: user.id,
+                name: user.name,
+                email: user.email
             })
 
         } catch (error: any) {
             res.status(error.statusCode || 500).send({ message: error.sqlMessage || error.message })
         }
     }
+
+    public async getAnotherUserProfile(req: Request, res:Response) {
+        try {
+            const token = req.headers.authorization as string
+            const { id } = req.params
+
+            const getData: GetData = new GetData()
+            const authenticationData = getData.getData(token)
+
+            const userData: UserData = new UserData()
+
+            const user = await userData.selectUserById(id)
+
+            res.status(200).send({
+                id: user.id,
+                name: user.name,
+                email: user.email
+            })
+
+        } catch (error: any) {
+            res.status(error.statusCode || 500).send({ message: error.sqlMessage || error.message })
+        }
+    }
+
 }
