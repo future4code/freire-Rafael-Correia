@@ -10,5 +10,5 @@ app.get("/user/profile", user.getUserProfile)
 app.get("/user/:id", user.getAnotherUserProfile)
 app.post("/signup", user.createUser)
 
-app.get("recipe/:id", recipe.getRecipe)
+app.get("/recipe/:id", recipe.getRecipe)
 app.post("/recipe", recipe.createRecipe)
