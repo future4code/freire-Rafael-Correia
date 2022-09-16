@@ -7,9 +7,9 @@ class RecipeData extends BaseDataBase {
     async insertRecipe(recipe: RecipeEntity): Promise<void> {
         await this.getConnection().insert({
             id: recipe.getId(),
-            name: recipe.getTitle(),
-            email: recipe.getDescription(),
-            password: recipe.getDate()
+            title: recipe.getTitle(),
+            description: recipe.getDescription(),
+            creation_date: recipe.getDate()
         })
             .into(this.recipeTableName)
     }
@@ -22,23 +22,14 @@ class RecipeData extends BaseDataBase {
             .into("cookenu_link_recipe_user")
     }
 
-    // async selectUserByEmail(email: string): Promise<UserEntity> {
-    //     const result = await this.getConnection()
-    //         .select("*")
-    //         .from(this.userTableName)
-    //         .where({ email })
+    public async selectRecipeById(id: string): Promise<any> {
+        const result = await this.getConnection()
+            .select("*")
+            .from(this.recipeTableName)
+            .where({ id })
 
-    //     return new UserEntity(result[0].id, result[0].name, result[0].email, result[0].password, result[0].role)
-    // }
-
-    // public async selectUserById(id: string): Promise<any> {
-    //     const result = await this.getConnection()
-    //         .select("*")
-    //         .from(this.userTableName)
-    //         .where({ id })
-
-    //     return new UserEntity(result[0].id, result[0].name, result[0].email, result[0].password, result[0].role)
-    // }
+        return new RecipeEntity(result[0].id, result[0].title, result[0].description, result[0].creation_date)
+    }
 }
 
 export default RecipeData

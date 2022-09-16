@@ -36,4 +36,29 @@ export class Recipe {
             res.status(error.statusCode || 500).send({ message: error.sqlMessage || error.message })
         }
     }
+
+    public async getRecipe(req: Request, res: Response) {
+        try {
+
+            const token = req.headers.authorization as string
+            const { id } = req.params
+
+            const getData: GetData = new GetData()
+            const authenticationData = getData.getData(token)
+
+            const recipeData: RecipeData = new RecipeData()
+
+            const recipe = await recipeData.selectRecipeById(id)
+
+            res.status(200).send({
+                id: recipe.id,
+                title: recipe.title,
+                description: recipe.description,
+                createdAt: recipe.creation_date
+            })
+
+        } catch (error: any) {
+            res.status(error.statusCode || 500).send({ message: error.sqlMessage || error.message })
+        }
+    }
 }

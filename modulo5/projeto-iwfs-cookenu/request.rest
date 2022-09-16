@@ -28,9 +28,13 @@ authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3ZGU1ZDBlLTIyMDYt
 ###
 POST http://localhost:3003/recipe
 Content-Type: application/json
-Authorization: 
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3ZGU1ZDBlLTIyMDYtNDljNS04NzcwLWRjYTQwMDBkMmJkNiIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2NjMzNjAwNjQsImV4cCI6MTY2MzM2MDM2NH0.i-TxA9tXCn5jNSRbpXWQiyDXUFMMJhMNXBq_iiU1Kak
 
 {
     "title": "Vitamina de banana",
     "description": "2 bananas, 1 colher de nescáu, 2 colheres de leite em pó, 3/4 copos de água"
 }
+
+###
+GET http://localhost:3003/recipe/b0d7fdec-34b6-4197-9e42-7bca4dce6958
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3ZGU1ZDBlLTIyMDYtNDljNS04NzcwLWRjYTQwMDBkMmJkNiIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2NjMzNjAwNjQsImV4cCI6MTY2MzM2MDM2NH0.i-TxA9tXCn5jNSRbpXWQiyDXUFMMJhMNXBq_iiU1Kak

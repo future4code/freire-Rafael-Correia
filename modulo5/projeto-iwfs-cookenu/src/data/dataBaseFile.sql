@@ -10,8 +10,6 @@ DELETE FROM cookenu_user WHERE name = "User Test";
 
 ALTER TABLE cookenu_user CHANGE email email VARCHAR(255) UNIQUE NOT NULL; 
 
-SELECT * FROM cookenu_user;
-
 CREATE TABLE cookenu_recipe(
 	id VARCHAR(255) PRIMARY KEY,
     title VARCHAR(255) UNIQUE NOT NULL,
@@ -25,3 +23,8 @@ CREATE TABLE cookenu_link_recipe_user(
     FOREIGN KEY (user_id) REFERENCES cookenu_user(id),
     FOREIGN KEY (recipe_id) REFERENCES cookenu_recipe(id)
 );
+
+SELECT * FROM cookenu_user;
+SELECT * FROM cookenu_recipe;
+SELECT * FROM cookenu_link_recipe_user;
+
