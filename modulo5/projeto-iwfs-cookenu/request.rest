@@ -2,9 +2,9 @@ POST http://localhost:3003/signup
 Content-Type: application/json
 
 {   
-    "name": "User Test",
-    "email": "testUser@gmail.com", 
-    "password": "user1597", 
+    "name": "Rute Gabrielly",
+    "email": "rute@gmail.com", 
+    "password": "senha1597", 
     "role": "normal"
 }
 
@@ -38,3 +38,12 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3ZGU1ZDBlLTIyMDYt
 ###
 GET http://localhost:3003/recipe/b0d7fdec-34b6-4197-9e42-7bca4dce6958
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3ZGU1ZDBlLTIyMDYtNDljNS04NzcwLWRjYTQwMDBkMmJkNiIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2NjMzNjEyODAsImV4cCI6MTY2MzM2NDg4MH0.dD27_95L1nN1rlB7JjS3ZAAvduqLEP3CqrxaloYXHag
+
+###
+POST http://localhost:3003/user/follow
+Content-Type: application/json
+Authorization: 
+
+{
+    "idFollowed": "d7de5d0e-2206-49c5-8770-dca4000d2bd6"
+}

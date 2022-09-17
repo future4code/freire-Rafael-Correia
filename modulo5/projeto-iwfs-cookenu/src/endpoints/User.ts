@@ -144,4 +144,25 @@ export class User {
         }
     }
 
+    public async followUser(req: Request, res: Response): Promise<void> {
+        try {
+            
+            const token = req.headers.authorization as string
+            const idFollowed = req.body.idFollowed
+
+            const authenticator: GetData = new GetData()
+            const idUser = authenticator.getData(token).id
+
+            const userData: UserData = new UserData()
+
+            const followUser = await userData.insetFollow(idUser, idFollowed)
+
+            res.status(200).send({
+                message: "User added to the following list"
+            })
+
+        } catch (error: any) {
+            res.status(error.statusCode || 500).send({ message: error.sqlMessage || error.message })
+        }
+    }
 }

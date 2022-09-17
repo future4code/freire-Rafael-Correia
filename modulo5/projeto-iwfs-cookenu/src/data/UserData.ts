@@ -32,6 +32,16 @@ class UserData extends BaseDataBase {
 
         return new UserEntity(result[0].id, result[0].name, result[0].email, result[0].password, result[0].role)
     }
+
+    public async insetFollow(idFollower: string, idFollowed: string): Promise<void> {
+        await this.getConnection()
+        .insert({
+            id_follower: idFollower,
+            id_followed: idFollowed
+        })
+        .into("cookenu_followers")
+    }
+
 }
 
 export default UserData
