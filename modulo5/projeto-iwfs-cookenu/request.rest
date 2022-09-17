@@ -13,8 +13,8 @@ GET http://localhost:3003/login
 Content-Type: application/json
 
 {
-    "email": "testUser@gmail.com", 
-    "password": "user1597"
+    "email": "rute@gmail.com", 
+    "password": "senha1597"
 }
 
 ### 
@@ -42,7 +42,16 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3ZGU1ZDBlLTIyMDYt
 ###
 POST http://localhost:3003/user/follow
 Content-Type: application/json
-Authorization: 
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU0OWRiMWM2LTY5ZjUtNGI2Ni05ZWI0LWM5ZGRkNTk4OTFiNyIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2NjMzODY1MjcsImV4cCI6MTY2MzM5MDEyN30.eY0SyfHWxz4-Yf9AoHZodu_wIN-AP1j0DTeaMjiKRUU
+
+{
+    "idFollowed": "d7de5d0e-2206-49c5-8770-dca4000d2bd6"
+}
+
+###
+POST http://localhost:3003/user/unfollow
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU0OWRiMWM2LTY5ZjUtNGI2Ni05ZWI0LWM5ZGRkNTk4OTFiNyIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2NjMzODc0MDAsImV4cCI6MTY2MzM5MTAwMH0._WCVOCocO8B9oGyMfol8fKxN5T-llG1IjMzri4DcjoY
 
 {
     "idFollowed": "d7de5d0e-2206-49c5-8770-dca4000d2bd6"

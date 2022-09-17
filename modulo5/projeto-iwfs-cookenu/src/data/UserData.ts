@@ -42,6 +42,14 @@ class UserData extends BaseDataBase {
         .into("cookenu_followers")
     }
 
+    public async deleteFollow(idFollower: string, idFollowed: string): Promise<void> {
+        await this.getConnection()
+        .delete()
+        .from("cookenu_followers")
+        .where({id_follower: idFollower})
+        .andWhere({id_followed: idFollowed})
+    }
+
 }
 
 export default UserData
