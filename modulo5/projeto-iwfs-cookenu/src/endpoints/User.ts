@@ -187,4 +187,24 @@ export class User {
             res.status(error.statusCode || 500).send({ message: error.sqlMessage || error.message })
         }
     }
+
+    public async getUserFeed(req: Request, res: Response) {
+        try {
+
+            const token = req.headers.authorization as string
+
+            const authenticator: GetData = new GetData()
+            const idUser = authenticator.getData(token).id
+
+            const userData: UserData = new UserData()
+
+            const userFeed = await userData.selectFeed(idUser)
+
+            res.status(200).send(userFeed)
+
+        } catch (error: any) {
+            res.status(error.statusCode || 500).send({ message: error.sqlMessage || error.message })
+        }
+    }
+
 }

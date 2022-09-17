@@ -7,6 +7,7 @@ const recipe: Recipe = new Recipe()
 
 app.get("/login", user.login)
 app.get("/user/profile", user.getUserProfile)
+app.get("/user/feed", user.getUserFeed)
 app.get("/user/:id", user.getAnotherUserProfile)
 app.post("/signup", user.createUser)
 app.post("/user/follow", user.followUser)

@@ -50,6 +50,18 @@ class UserData extends BaseDataBase {
         .andWhere({id_followed: idFollowed})
     }
 
+    public async selectFeed(id: string) {
+        const result = await this.getConnection()
+        .select("cookenu_recipe.*", "cookenu_user.name")
+        .from("cookenu_followers")
+        .innerJoin("cookenu_user", "cookenu_followers.id_followed", "cookenu_user.id")
+        .innerJoin("cookenu_link_recipe_user", "cookenu_followers.id_followed", "cookenu_link_recipe_user.user_id")
+        .innerJoin("cookenu_recipe", "cookenu_link_recipe_user.recipe_id", "cookenu_recipe.id")
+        .where({"cookenu_followers.id_follower": `${id}`})
+
+        return result
+    }
+
 }
 
 export default UserData

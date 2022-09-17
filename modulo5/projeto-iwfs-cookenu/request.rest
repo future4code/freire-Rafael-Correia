@@ -56,3 +56,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU0OWRiMWM2LTY5ZjUt
 {
     "idFollowed": "d7de5d0e-2206-49c5-8770-dca4000d2bd6"
 }
+
+###
+GET http://localhost:3003/user/feed
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU0OWRiMWM2LTY5ZjUtNGI2Ni05ZWI0LWM5ZGRkNTk4OTFiNyIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2NjMzODk5MTYsImV4cCI6MTY2MzM5MzUxNn0.0C4kVudkvTjwLByYpzHyEUFkB-oD_f8KiGvrYXNjn7A
