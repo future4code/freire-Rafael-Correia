@@ -60,3 +60,34 @@ export class User {
         this.role = newRole
     }
 }
+
+export interface ISignUpInputDTO {
+    name: string,
+    email: string,
+    password: string,
+}
+
+export interface iLoginInputDTO {
+    email: string,
+    password: string
+}
+
+export interface IGetUsersInputDTO {
+    token: any,
+    search: string,
+    order: string,
+    sort: string,
+    limit: string,
+    page: string
+}
+
+export interface IGetUsersOutputDTO {
+    id: string,
+    name: string,
+    email: string
+}
+
+export interface IDeleteUserInputDTO {
+    token: string,
+    idToDelete: string
+}

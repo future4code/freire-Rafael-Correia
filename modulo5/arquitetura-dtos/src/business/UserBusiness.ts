@@ -1,11 +1,11 @@
 import { UserDatabase } from "../database/UserDatabase"
-import { User, USER_ROLES } from "../models/User"
+import { IDeleteUserInputDTO, IGetUsersInputDTO, IGetUsersOutputDTO, iLoginInputDTO, ISignUpInputDTO, User, USER_ROLES } from "../models/User"
 import { Authenticator, ITokenPayload } from "../services/Authenticator"
 import { HashManager } from "../services/HashManager"
 import { IdGenerator } from "../services/IdGenerator"
 
 export class UserBusiness {
-    public signup = async (input: any) => {
+    public signup = async (input: ISignUpInputDTO) => {
         const name = input.name
         const email = input.email
         const password = input.password
@@ -69,7 +69,7 @@ export class UserBusiness {
         return response
     }
 
-    public login = async (input: any) => {
+    public login = async (input: iLoginInputDTO) => {
         const email = input.email
         const password = input.password
 
@@ -127,7 +127,7 @@ export class UserBusiness {
         return response
     }
 
-    public getUsers = async (input: any) => {
+    public getUsers = async (input: IGetUsersInputDTO) => {
         const token = input.token
         const search = input.search || ""
         const order = input.order || "name"
@@ -164,7 +164,7 @@ export class UserBusiness {
                 userDB.role
             )
 
-            const userResponse: any = {
+            const userResponse: IGetUsersOutputDTO = {
                 id: user.getId(),
                 name: user.getName(),
                 email: user.getEmail()
@@ -180,7 +180,7 @@ export class UserBusiness {
         return response
     }
 
-    public deleteUser = async (input: any) => {
+    public deleteUser = async (input: IDeleteUserInputDTO) => {
         const token = input.token
         const idToDelete = input.idToDelete
 
