@@ -16,4 +16,22 @@ export class PostDatabase extends BaseDatabase {
             .connection(PostDatabase.TABLE_POSTS)
             .insert(postDB)
     }
+
+    public getPosts = async () => {
+        const postsDB: IPostDB[] = await BaseDatabase
+            .connection(PostDatabase.TABLE_POSTS)
+            .select()
+
+        return postsDB
+    }
+
+    public getLikes = async (postId: string) => {
+        const result: any = await BaseDatabase
+            .connection(PostDatabase.TABLE_LIKES)
+            .select()
+            .count("id AS likes")
+            .where({ post_id: postId })
+
+        return result[0].likes as number
+    }
 }

@@ -55,3 +55,7 @@ export interface ICreatePostInputDTO {
     token: string,
     content: string
 }
+
+export interface IGetPostsOutputDTO {
+    posts: Post[]
+}
