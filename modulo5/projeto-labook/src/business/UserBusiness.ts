@@ -3,7 +3,7 @@ import { AuthenticationError } from "../errors/AuthenticationError"
 import { ConflictError } from "../errors/ConflictError"
 import { ParamsError } from "../errors/ParamsError"
 import { UnprocessableError } from "../errors/UnprocessableError"
-import { ILoginInputDTO, ISignupInputDTO, User, USER_ROLES } from "../models/User"
+import { IAuthentificationOutputDTO, ILoginInputDTO, ISignupInputDTO, User, USER_ROLES } from "../models/User"
 import { Authenticator, ITokenPayload } from "../services/Authenticator"
 import { HashManager } from "../services/HashManager"
 import { IdGenerator } from "../services/IdGenerator"
@@ -62,7 +62,7 @@ export class UserBusiness {
 
         const token = this.authenticator.generateToken(payload)
 
-        const response = {
+        const response: IAuthentificationOutputDTO = {
             message: "Cadastro realizado com sucesso",
             token
         }
@@ -115,7 +115,7 @@ export class UserBusiness {
 
         const token = this.authenticator.generateToken(payload)
 
-        const response = {
+        const response: IAuthentificationOutputDTO = {
             message: "Login realizado com sucesso",
             token
         }
