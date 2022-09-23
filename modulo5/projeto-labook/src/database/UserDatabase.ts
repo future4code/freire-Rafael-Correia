@@ -4,7 +4,7 @@ import { BaseDatabase } from "./BaseDatabase"
 export class UserDatabase extends BaseDatabase {
     public static TABLE_USERS = "Labook_Users"
 
-    public async findByEmail(email: string) {
+    public findByEmail = async (email: string) => {
         const userDB: IUserDB[] = await BaseDatabase
             .connection(UserDatabase.TABLE_USERS)
             .select("*")
@@ -13,7 +13,7 @@ export class UserDatabase extends BaseDatabase {
         return userDB[0]
     }
 
-    public async createUser(user: User) {
+    public createUser = async (user: User) => {
         const userDB: IUserDB = {
             id: user.getId(),
             name: user.getName(),

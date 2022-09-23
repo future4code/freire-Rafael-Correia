@@ -15,7 +15,7 @@ export class UserBusiness {
         private authenticator: Authenticator
     ) {}
 
-    public async signup(input: ISignupInputDTO) {
+    public signup = async (input: ISignupInputDTO) => {
 
         const {name, email, password} = input
         const emailValidator: RegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -25,8 +25,8 @@ export class UserBusiness {
         }
 
         if(
-            !(name.length < 3) || 
-            !(password.length < 6) ||
+            name.length < 3 || 
+            password.length < 6 ||
             !(typeof name === "string") ||
             !(typeof email === "string") ||
             !(typeof password === "string") ||
