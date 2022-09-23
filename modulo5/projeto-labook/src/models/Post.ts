@@ -50,3 +50,8 @@ export class Post {
         this.likes = newLikes
     }
 }
+
+export interface ICreatePostInputDTO {
+    token: string,
+    content: string
+}

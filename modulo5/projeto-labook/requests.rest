@@ -18,3 +18,12 @@ Content-Type: application/json
     "email": "rafa@gmail.com",
     "password": "senh@312"
 }
+
+###
+POST http://localhost:3003/posts/
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZiMmI3NjA1LWFhZGItNGM5MS04NmJmLTM0NWMwNDlhZTg3NCIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjM5NjIwMTgsImV4cCI6MTY2NDA0ODQxOH0.MWZpb3xWD662B_4s5I8a89xy_d_eIuszEjDg2ci9oL4
+
+{
+    "content": ""
+}
