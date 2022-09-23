@@ -9,3 +9,12 @@ Content-Type: application/json
     "name": "Rafael Correia",
     "email": "rafa@gmail.com"
 }
+
+###
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "rafa@gmail.com",
+    "password": "senh@312"
+}
